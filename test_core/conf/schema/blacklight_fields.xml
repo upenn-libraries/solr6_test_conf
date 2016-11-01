@@ -1,0 +1,27 @@
+<!--
+ Fields as needed by a stock generated blacklight installation.
+
+ This was created for test purposes, should NOT be used: instead, adapt BL config to Bill's schema.
+
+ TODO: can/should dynamic_fields.xml accomodate some of these?
+-->
+
+<!-- these fields break the rule of never being both stored and indexed -->
+
+<field name="format" type="string" indexed="true" stored="true"/>
+<field name="isbn_t" type="text" indexed="true" stored="true" multiValued="true"/>
+<field name="pub_date" type="string" indexed="true" stored="true" multiValued="true"/>
+
+<!-- sort fields -->
+
+<field name="title_sort" type="string" indexed="true" stored="false" multiValued="false"/>
+<field name="author_sort" type="string" indexed="true" stored="false" multiValued="false"/>
+<field name="pub_date_sort" type="int" indexed="true" stored="true" multiValued="false"/>
+<copyField source="pub_date" dest="pub_date_sort"/>
+
+<!-- BL stock schema defines _display as multiValued=true unless overridden; this schema assumes the reverse -->
+
+<field name="material_type_display" type="string" indexed="false" stored="true" multiValued="true"/>
+<field name="published_display" type="string" indexed="false" stored="true" multiValued="true"/>
+<field name="url_fulltext_display" type="string" indexed="false" stored="true" multiValued="true"/>
+<field name="url_suppl_display" type="string" indexed="false" stored="true" multiValued="true"/>

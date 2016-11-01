@@ -38,9 +38,11 @@
 
   <!ENTITY library_types    SYSTEM "schema/library_types.xml">
 
+  <!ENTITY solrplugins_types SYSTEM "schema/solrplugins_types.xml">
   <!-- ...and the dynanic fields -->
   <!ENTITY dynamic_fields    SYSTEM "schema/dynamic_fields.xml">
-
+  <!ENTITY solrplugins_fields SYSTEM "schema/solrplugins_fields.xml">
+  <!ENTITY blacklight_fields SYSTEM "schema/blacklight_fields.xml">
 
   ]>
 
@@ -97,6 +99,7 @@
   &primative_types;
   &text_types;
   &numeric_types;
+  &solrplugins_types;
   &library_types;
   &delimited_types;
 
@@ -174,6 +177,8 @@
  <!-- Inser the dynamic fields -->
 
  &dynamic_fields;
+ &solrplugins_fields;
+<!-- &blacklight_fields; -->
 
 
 

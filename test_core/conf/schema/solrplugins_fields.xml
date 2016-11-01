@@ -1,0 +1,2 @@
+
+<dynamicField name="*_xfacet" type="xfacet" indexed="true" stored="false" multiValued="true" />
